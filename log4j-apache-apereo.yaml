@@ -41,3 +41,6 @@ requests:
         group: 1
         regex:
           - '([A-Za-z0-9\.\-\_]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # extract Hostname
+      - type: kval
+        kval:
+          - interactsh_ip
