@@ -9,6 +9,7 @@ info:
     - https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
     - https://www.lunasec.io/docs/blog/log4j-zero-day/
     - https://attackerkb.com/topics/in9sPR2Bzt/cve-2021-44228-log4shell/rapid7-analysis
+    - https://struts.apache.org/maven/struts2-core/apidocs/org/apache/struts2/dispatcher/DefaultStaticContentLoader.html
   tags: cve,cve2021,rce,oast,log4j,struts
 
 requests:
