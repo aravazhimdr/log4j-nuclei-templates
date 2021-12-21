@@ -42,14 +42,14 @@ requests:
       - type: regex
         part: interactsh_request
         regex:
-          - '([A-Za-z0-9\.\-\_]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})' 
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})' 
 
     extractors:
       - type: regex
         part: interactsh_request
         group: 1
         regex:
-          - '([A-Za-z0-9\.\-\_]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # extract Hostname
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # extract Hostname
       - type: kval
         kval:
           - interactsh_ip
