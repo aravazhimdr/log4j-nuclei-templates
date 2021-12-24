@@ -41,12 +41,12 @@ requests:
       - type: regex
         part: interactsh_request
         regex:
-          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z]{2,4})'
 
     extractors:
       - type: regex
         part: interactsh_request
         group: 1
         regex:
-          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # Extract ${hostName}
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z0-9]+)\.([a-z]{2,4})'   # Extract ${hostName}
 
