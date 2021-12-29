@@ -30,7 +30,7 @@ requests:
       header_set4: fuzz/header-set4.txt
       header_set5: fuzz/header-set5.txt
     attack: pitchfork
-    threads: 125
+    threads: 25
 
     matchers-condition: and
     matchers:
